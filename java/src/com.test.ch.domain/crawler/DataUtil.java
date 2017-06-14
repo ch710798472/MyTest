@@ -4,6 +4,7 @@ package com.test.ch.domain.crawler;
  * Created by banmo.ch on 17/6/14.
  */
 public class DataUtil {
+    /*
     public static YunData getData(String url) {
         //自己对okhttp的封装
         ResponseBody body = OkhttpUtil.syncGet(url);
@@ -29,4 +30,5 @@ public class DataUtil {
         YunData yunData = JSON.parseObject(json, YunData.class);
         return yunData;
     }
+    */
 }
