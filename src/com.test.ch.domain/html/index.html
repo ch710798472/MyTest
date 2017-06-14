@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script language="JavaScript">
+    var ctx = canvas.getContext('2d');
+    var imageData = ctx.createImageData(canvas.width, canvas.height); // 缓冲的帧数据
+
+    // 对imageData的操作
+    var color = Color.getRGB('rgb(123, 230, 233)');
+
+    var index = x + canvas.width * y;
+    imageData[index] = color.r;
+    imageData[index+1] = color.g;
+    imageData[index+2] = color.b;
+    imageData[index+3] = color.a;
+
+    // 绘制3d 图形
+    ctx.putImageData(imgData, 0, 0);
+
+</script>
+<body>
+<canvas width="200" height="200" id="c1"></canvas>
+</body>
+</html>
