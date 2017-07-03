@@ -13,6 +13,9 @@ import java.util.Date;
  */
 public class JustTest {
     public static void main(String[] args) {
+        String url = "abc";
+        String nullString = null;
+        System.out.println(url + nullString);
         String dateString = "20991230";
         try {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
@@ -30,8 +33,10 @@ public class JustTest {
             + "||/ossbisface/1a9410bb-8282-4ce9-91dd-19e9f89b48b3.jpg##A-VERSO1||ASDASD\"";
         String[] pics = pic.split("##");
         System.out.println(Arrays.asList(pics));
-        System.out.println(pics[0].indexOf("-FACE") + "\r\n" + pics[1].indexOf("-VERSO") + "\r\n" + pics[2].indexOf("-FACE"));
-        System.out.println(pics[0].indexOf("-FACE") + "\r\n" + pics[1].indexOf("-VERSO") + "\r\n" + pics[2].indexOf("-FACE"));
+        System.out.println(
+            pics[0].indexOf("-FACE") + "\r\n" + pics[1].indexOf("-VERSO") + "\r\n" + pics[2].indexOf("-FACE"));
+        System.out.println(
+            pics[0].indexOf("-FACE") + "\r\n" + pics[1].indexOf("-VERSO") + "\r\n" + pics[2].indexOf("-FACE"));
         String pictureUrl = pic;
         String[] pictures = pictureUrl.split("##");
         //至少需要正反面2张图片，有可能有侧脸但是只取FACE和VERSO
