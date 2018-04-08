@@ -1,5 +1,11 @@
 package com.test.ch.domain.gof;
 
+import com.google.common.collect.Lists;
+import com.sun.btrace.BTraceUtils;
+
+import java.util.Collections;
+import java.util.List;
+
 /**
  * builder设计模式，对象初始化简洁明了
  */
@@ -76,5 +82,11 @@ public class Builder {
 
     public static void main(String[] args) {
         new Builder.UserBuilder("张","三").age(2).address("213").build();
+        List<Long> resultItemList = Lists.newArrayList();
+        if(null == resultItemList ||resultItemList.isEmpty()) {
+            System.out.println(1);
+        } else {
+            System.out.println(resultItemList);
+        }
     }
 }
